@@ -14,14 +14,13 @@ import "./SearchResults.css";
 const SearchResults = () => {
   const [{ term }, dispatch] = useStateValue();
   const { data } = useGoogleSearch(term)
-  console.log("data", data)
 
   return (
     <div className="searchPage">
       <div className="searchPage_header">
         <Link to="/">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png"
-            class="searchPage_Logo" alt=""
+            className="searchPage_Logo" alt=""
           />
         </Link>
         <div className="searchPage_headerBody">
@@ -72,7 +71,7 @@ const SearchResults = () => {
           </p>
           {data?.items.map(item => (
             <div className="searchPage_result">
-              <a href={item.link} class="item_display_link">
+              <a href={item.link} className="item_display_link">
                 {item.pagemap?.cse_image?.length > 0 && item.pagemap?.cse_image[0]?.src && (
                   <img className="searchPage-img" src={item.pagemap?.cse_image?.length > 0 && item.pagemap?.cse_image[0]?.src} alt="" />
                 )}

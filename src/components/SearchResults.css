@@ -110,7 +110,6 @@
     margin-top: 0;
     width: 380px;
     margin:auto;
-    margin-left: 130px;
   }
   .searchPage_options{
     padding-left: 30px;
@@ -120,5 +119,10 @@
   .searchPage_optionsRight{
     display:none;
   }
+
+  .searchPage_optionsLeft{
+    padding: 0 10px;
+  }
 }
+
 
